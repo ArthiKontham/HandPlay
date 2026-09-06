@@ -1,4 +1,4 @@
-# HandVerse (React + Vite)
+# HandPlay (React + Vite)
 
 Webcam hand-tracking playground — four games controlled entirely with your hands, running in the browser via MediaPipe Hands. No Unity, no native plugins.
 
