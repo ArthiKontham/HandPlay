@@ -71,37 +71,41 @@ Then open [http://localhost:8790](http://localhost:8790). On Windows, use `pytho
 ## Project Structure
 
 ```text
-index.html                       # the entire app — 956 lines
-├── <style>    lines 6–157       #   all CSS, inline
-└── <script>   lines 224–956     #   ~730 lines of vanilla JS game logic
-
-package.json                     # ESM, zero runtime dependencies
-vite.config.js                   # dev :5291, preview :5292, host:true, es2020
-vercel.json                      # build config + wasm/tflite MIME and cache headers
-Thumbnail.png
-
-serve.js                         # Node fallback server — no build, no npm install
-serve.py                         # the same server in Python
-start-windows.bat                # picks node → py → python, whichever exists
-start-mac-linux.command
-
-certs/                           # local TLS for phone testing (gitignored)
-├── cert.pem
-└── key.pem
-
-public/
-├── mediapipe/                   # 24 MB — MediaPipe Hands vendored locally
-│   ├── hands.js
-│   ├── hands.binarypb
-│   ├── hand_landmark_full.tflite
-│   ├── hand_landmark_lite.tflite
-│   ├── hands_solution_packed_assets.data / _loader.js
-│   ├── hands_solution_simd_wasm_bin.js / .wasm / .data
-│   └── hands_solution_wasm_bin.js / .wasm
+handplay/
+├── .gitignore
+├── README.md
+├── package.json
+├── package-lock.json
+├── vite.config.js
+├── vercel.json
+├── Thumbnail.png
 │
-└── sprites/                     # 71 PNGs, ~1 MB
-    ├── 23 fruits × 3 each       # whole, -left, -right
-    └── bomb.png, bomb-blast.png
+├── index.html
+├── serve.js
+├── serve.py
+├── start-windows.bat
+├── start-mac-linux.command
+│
+├── public/
+│   ├── mediapipe/
+│   │   ├── hands.js
+│   │   ├── hands.binarypb
+│   │   ├── hand_landmark_full.tflite
+│   │   ├── hand_landmark_lite.tflite
+│   │   ├── hands_solution_packed_assets.data
+│   │   ├── hands_solution_packed_assets_loader.js
+│   │   ├── hands_solution_simd_wasm_bin.js
+│   │   ├── hands_solution_simd_wasm_bin.wasm
+│   │   ├── hands_solution_simd_wasm_bin.data
+│   │   ├── hands_solution_wasm_bin.js
+│   │   └── hands_solution_wasm_bin.wasm
+│   │
+│   └── sprites/
+│       ├── fruit sprites...
+│       ├── fruit-left sprites...
+│       ├── fruit-right sprites...
+│       ├── bomb.png
+│       └── bomb-blast.png
 ```
 
 ## Tuning
