@@ -4,7 +4,7 @@ A browser game that turns your webcam into the play surface. Fruit arcs across a
 
 ## Preview
 
-![Fruits Cut AR](Thumbnail.png)
+![Fruits Cut AR](Preview.png)
 
 ## Live Demo
 
