@@ -6,6 +6,10 @@ A browser game that turns your webcam into the play surface. Fruit arcs across a
 
 ![Fruits Cut AR](Thumbnail.png)
 
+## Live Demo
+
+🔗 [HandPlay – Live Website](https://handplayy.vercel.app/)
+
 ## Features
 
 - Slice fruit in mid-air with **webcam hand tracking** — no controller, no touchscreen
